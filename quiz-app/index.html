@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Latihan Mid Term</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ===================== SETUP SCREEN ===================== -->
+  <section id="setup-screen" class="screen active">
+    <div class="card">
+      <h1>📝 Quiz Latihan Mid Term</h1>
+      <p class="subtitle">Pilih topik dan jumlah soal untuk mulai latihan.</p>
+
+      <div class="field">
+        <label>Pilih Topik Materi</label>
+        <div id="topic-list" class="topic-list"></div>
+      </div>
+
+      <div class="field">
+        <label for="num-questions">Jumlah Soal</label>
+        <input type="number" id="num-questions" min="1" value="10">
+        <small id="max-hint">Maksimal tersedia: -</small>
+      </div>
+
+      <div class="field">
+        <label>Mode Jawaban</label>
+        <div class="mode-list">
+          <label class="mode-option">
+            <input type="radio" name="mode" value="instant" checked>
+            Tampilkan jawaban &amp; alasan langsung setelah menjawab
+          </label>
+          <label class="mode-option">
+            <input type="radio" name="mode" value="end">
+            Tampilkan jawaban &amp; alasan di akhir (review)
+          </label>
+        </div>
+      </div>
+
+      <button id="start-btn" class="btn btn-primary">Mulai Quiz</button>
+      <p id="setup-error" class="error-msg"></p>
+    </div>
+  </section>
+
+  <!-- ===================== QUIZ SCREEN ===================== -->
+  <section id="quiz-screen" class="screen">
+    <div class="card quiz-card">
+      <div class="quiz-header">
+        <span id="quiz-progress">Soal 1 dari 10</span>
+        <span id="quiz-topic-badge" class="badge"></span>
+      </div>
+
+      <div class="progress-bar-track">
+        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+      </div>
+
+      <h2 id="question-text" class="question-text"></h2>
+
+      <div id="choices-list" class="choices-list"></div>
+
+      <div id="feedback-box" class="feedback-box hidden">
+        <p id="feedback-result" class="feedback-result"></p>
+        <p id="feedback-correct" class="feedback-correct"></p>
+        <p id="feedback-explanation" class="feedback-explanation"></p>
+      </div>
+
+      <div class="quiz-actions">
+        <button id="prev-btn" class="btn btn-secondary">⟵ Soal Sebelumnya</button>
+        <button id="check-btn" class="btn btn-primary">Cek Jawaban</button>
+        <button id="next-btn" class="btn btn-primary hidden">Soal Berikutnya ⟶</button>
+        <button id="finish-btn" class="btn btn-success hidden">Selesai &amp; Lihat Hasil</button>
+      </div>
+      <button id="quit-btn" class="btn btn-link">Keluar dari Quiz</button>
+    </div>
+  </section>
+
+  <!-- ===================== RESULT SCREEN ===================== -->
+  <section id="result-screen" class="screen">
+    <div class="card">
+      <h1>📊 Hasil Quiz</h1>
+      <div id="score-summary" class="score-summary"></div>
+      <div id="topic-breakdown" class="topic-breakdown"></div>
+
+      <h3 class="review-title">Review Semua Soal</h3>
+      <div id="review-list" class="review-list"></div>
+
+      <button id="restart-btn" class="btn btn-primary">Mulai Quiz Baru</button>
+    </div>
+  </section>
+
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
