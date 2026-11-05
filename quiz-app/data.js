@@ -1,6 +1,7 @@
 // Bank soal untuk latihan Mid Term Exam
 // Topik: Data Security Management (Week 4), Document & Content Management (Week 5),
-// Reference & Master Data Management (Week 6)
+// Reference & Master Data Management (Week 6), Pengenalan Data Governance & Data Management,
+// Data Architecture, Data Development & Operations
 
 const QUIZ_DATA = [
   // ===================== WEEK 4: DATA SECURITY MANAGEMENT =====================
@@ -587,5 +588,351 @@ const QUIZ_DATA = [
     ],
     answer: 3,
     explanation: "Golden value adalah nilai yang paling akurat, terkini, dan relevan yang dipilih untuk digunakan secara konsisten di seluruh organisasi, biasanya hasil dari proses match-merge."
+  },
+
+  // ===================== MODUL: PENGENALAN DATA GOVERNANCE & DATA MANAGEMENT =====================
+  {
+    topic: "Pengenalan Data Governance & Data Management",
+    question: "Dalam analogi pipa dan cairan, apa yang diibaratkan sebagai 'cairan' dan apa peran Data Governance?",
+    choices: [
+      "Data adalah cairan yang mengalir; Data Governance adalah keputusan tentang data tersebut (siapa, apa, kapan, di mana, bagaimana people/process/rules/teknologi memengaruhi data agar tetap 'bersih')",
+      "IT adalah cairan; Data Governance adalah pompa dan filter",
+      "Data adalah pipa; Data Governance adalah keputusan tentang pipa",
+      "Data Governance adalah pipa yang memindahkan informasi"
+    ],
+    answer: 0,
+    explanation: "IT diibaratkan pipa dan IT Governance adalah keputusan tentang pipa/pompa/filter. Data adalah cairan yang mengalir, dan Data Governance adalah keputusan tentang data itu sendiri."
+  },
+  {
+    topic: "Pengenalan Data Governance & Data Management",
+    question: "Manakah definisi Data Governance yang paling sesuai dengan modul?",
+    choices: [
+      "Proses membersihkan data (data cleansing) pada seluruh sistem",
+      "Pelaksanaan otoritas dan kontrol (perencanaan, pemantauan, penegakan) atas pengelolaan aset data",
+      "Aktivitas tim Data Warehouse untuk membuat laporan BI",
+      "Keputusan mengenai pembelian server dan jaringan"
+    ],
+    answer: 1,
+    explanation: "Data Governance adalah high-level planning and control atas data management, yaitu authority dan control (planning, monitoring, enforcement) terhadap pengelolaan data assets."
+  },
+  {
+    topic: "Pengenalan Data Governance & Data Management",
+    question: "Kepemilikan data (data ownership) tidak didefinisikan secara formal sehingga sebagian besar unit merasa hanya sebagai data consumer. Apa dampaknya terhadap bisnis?",
+    choices: [
+      "Data menjadi otomatis lebih akurat",
+      "Proses cleansing data menjadi lebih efisien",
+      "Keputusan terkait masalah data tidak diambil tepat waktu (proses resolusi konflik lebih lama)",
+      "Cross selling menjadi lebih mudah"
+    ],
+    answer: 2,
+    explanation: "Tanpa pemilik data yang jelas, tidak ada pihak yang bertanggung jawab menyelesaikan masalah data sehingga resolusi konflik menjadi lama dan keputusan terlambat."
+  },
+  {
+    topic: "Pengenalan Data Governance & Data Management",
+    question: "Menurut guiding principles, bagaimana sebaiknya data steward ditunjuk?",
+    choices: [
+      "Direkrut dari luar perusahaan khusus untuk peran steward",
+      "Dipilih dari staf IT saja",
+      "Dilatih dari nol oleh konsultan",
+      "Ditemukan, bukan dibuat: tunjuk orang yang sudah tertarik dan terlibat dalam pekerjaan data"
+    ],
+    answer: 3,
+    explanation: "Prinsip 'the best data stewards are found, not made'. Penunjukan adalah pengakuan dan formalisasi akuntabilitas atas pekerjaan yang sudah mereka lakukan."
+  },
+  {
+    topic: "Pengenalan Data Governance & Data Management",
+    question: "Tiga organisasi lintas fungsi yang memiliki tanggung jawab 'legislatif dan yudisial' dalam data governance adalah...",
+    choices: [
+      "Data Governance Council, Data Stewardship Program Steering Committees, dan Data Stewardship Teams",
+      "CIO, DBA, dan Data Architect",
+      "Data Governance Office, DBA, dan Data Analyst",
+      "Data Management Executive, Data Broker, dan Help Desk"
+    ],
+    answer: 0,
+    explanation: "Ketiganya bertugas menetapkan kebijakan/standar (legislatif) dan menyelesaikan isu (yudisial), sedangkan Data Management Services menjalankan fungsi eksekutif (administrasi, layanan, perlindungan)."
+  },
+  {
+    topic: "Pengenalan Data Governance & Data Management",
+    question: "Pada Data Issue Escalation Path, sekitar berapa persen konflik data dapat diselesaikan di level Data Stewardship Teams?",
+    choices: ["Kurang dari 5%", "Kurang dari 20%", "50-60%", "80-85%"],
+    answer: 3,
+    explanation: "Sebagian besar isu (80-85%) diselesaikan di level operasional oleh Data Stewardship Teams. Sisanya naik ke Steering Committee (<20%) dan Data Governance Council (<5%)."
+  },
+  {
+    topic: "Pengenalan Data Governance & Data Management",
+    question: "Apa perbedaan utama data policy dengan data standards & procedures?",
+    choices: [
+      "Policy menjelaskan 'bagaimana' melakukan sesuatu, standards menjelaskan 'apa'",
+      "Policy menjelaskan 'apa' yang harus/tidak boleh dilakukan, standards dan procedures menjelaskan 'bagaimana' melakukannya",
+      "Policy lebih detail dan jumlahnya banyak",
+      "Tidak ada perbedaan"
+    ],
+    answer: 1,
+    explanation: "Data policy adalah pernyataan singkat maksud manajemen dan aturan fundamental (jumlahnya relatif sedikit). Standards dan procedures lebih detail dan menjelaskan cara melakukan sesuatu."
+  },
+  {
+    topic: "Pengenalan Data Governance & Data Management",
+    question: "Manakah yang BUKAN merupakan hakikat Data Governance?",
+    choices: [
+      "Kerja sama antara Business dan IT",
+      "Proses yang berkelanjutan",
+      "Masalah teknologi yang cukup diserahkan ke IT",
+      "Inisiatif tingkat enterprise"
+    ],
+    answer: 2,
+    explanation: "Data Governance adalah kombinasi people, process, technology, dan metrics, bukan sekadar masalah teknologi atau aktivitas yang 'dilempar' ke IT."
+  },
+  {
+    topic: "Pengenalan Data Governance & Data Management",
+    question: "Siapa yang dilaporkan oleh Data Management Executive (DME)?",
+    choices: ["CIO", "Chief Data Steward", "Data Stewardship Team", "Regulatory Bodies"],
+    answer: 0,
+    explanation: "DME adalah manajer tertinggi Data Management Services di departemen IT, melapor ke CIO ('tangan kanan CIO'), dan bertanggung jawab mengoordinasikan governance, stewardship, serta proyek data management."
+  },
+  {
+    topic: "Pengenalan Data Governance & Data Management",
+    question: "Apa tujuan utama dibentuknya Data Governance Office pada perusahaan besar?",
+    choices: [
+      "Menggantikan Data Governance Council",
+      "Mengelola infrastruktur server dan jaringan",
+      "Menyediakan dukungan penuh waktu bagi tanggung jawab data stewardship paruh waktu, melalui Data Stewardship Facilitators",
+      "Mengaudit seluruh pengguna data secara eksternal"
+    ],
+    answer: 2,
+    explanation: "Business data steward biasanya bekerja paruh waktu. DGO berisi facilitator yang mengurus legwork (jadwal rapat, notulen, pengumpulan informasi) agar steward dapat mengambil keputusan yang tepat."
+  },
+
+  // ===================== MODUL: DATA ARCHITECTURE =====================
+  {
+    topic: "Data Architecture",
+    question: "Apa inti dari Data Architecture?",
+    choices: [
+      "Memilih merek database yang paling murah",
+      "Menjalankan backup dan recovery harian",
+      "Mengidentifikasi kebutuhan data enterprise dan merancang serta memelihara master blueprint untuk memenuhinya",
+      "Membuat laporan dashboard untuk manajer"
+    ],
+    answer: 2,
+    explanation: "Data Architecture mengidentifikasi kebutuhan data enterprise (apa pun strukturnya) dan merancang blueprint untuk memandu integrasi data, kontrol aset data, serta menyelaraskan investasi data dengan strategi bisnis."
+  },
+  {
+    topic: "Data Architecture",
+    question: "Apa tujuan (purpose) Enterprise Data Architecture dibandingkan domain arsitektur lainnya?",
+    choices: [
+      "Mendeskripsikan bagaimana data harus diorganisasi dan dikelola",
+      "Mendeskripsikan teknologi fisik yang dibutuhkan agar sistem berfungsi",
+      "Mengidentifikasi bagaimana enterprise menciptakan nilai bagi pelanggan",
+      "Mendeskripsikan struktur dan fungsi aplikasi di enterprise"
+    ],
+    answer: 0,
+    explanation: "Business Architecture: penciptaan nilai. Data Architecture: pengorganisasian dan pengelolaan data. Applications Architecture: struktur dan fungsi aplikasi. Technology Architecture: teknologi fisik."
+  },
+  {
+    topic: "Data Architecture",
+    question: "Pendekatan pembangunan enterprise data model mana yang biasanya direkomendasikan?",
+    choices: [
+      "Hanya top-down",
+      "Hanya bottom-up",
+      "Kombinasi: mulai bottom-up dari model yang ada, lalu lengkapi dengan mendelegasikan pemodelan subject area ke proyek-proyek",
+      "Tidak perlu membangun enterprise data model"
+    ],
+    answer: 2,
+    explanation: "Top-down dimulai dari membentuk subject area, bottom-up berdasarkan model yang sudah ada. Kombinasi keduanya yang umumnya disarankan."
+  },
+  {
+    topic: "Data Architecture",
+    question: "Urutan level model dari yang paling umum ke paling detail pada Enterprise Data Model adalah...",
+    choices: [
+      "Logical Model → Conceptual Model → Subject Area Model → Application-specific",
+      "Subject Area Model → Conceptual Model → Physical Model",
+      "Application-specific → Logical Model → Conceptual Model",
+      "Conceptual Model → Subject Area Model → Logical Model → Application/Project-Specific (LDM/PDM)"
+    ],
+    answer: 3,
+    explanation: "Conceptual model (12-20 subject area) dirinci menjadi Subject Area Model, lalu Logical Model per subject area, dan terakhir model spesifik aplikasi/proyek (LDM & PDM)."
+  },
+  {
+    topic: "Data Architecture",
+    question: "Pada matriks data flow (entitas vs proses bisnis), apa arti penanda 'Create' dan 'Read/use'?",
+    choices: [
+      "Create: proses yang menghapus data; Read/use: proses yang mengarsipkan data",
+      "Create: proses bisnis yang membuat/menghasilkan data entitas; Read/use: proses yang hanya membaca/menggunakannya",
+      "Create dan Read/use sama-sama berarti mengubah data",
+      "Create: pengguna eksternal; Read/use: pengguna internal"
+    ],
+    answer: 1,
+    explanation: "Matriks menunjukkan proses mana yang menjadi sumber (create) suatu entitas data dan proses mana yang hanya menggunakannya (read/use), membantu melihat aliran data di seluruh enterprise."
+  },
+  {
+    topic: "Data Architecture",
+    question: "Manakah yang termasuk deliverables Data Architecture menurut context diagram?",
+    choices: [
+      "Enterprise Data Model, Data Flows, Data Value Chains, dan Implementation Roadmap",
+      "Backup tapes dan log database",
+      "Source code aplikasi mobile",
+      "Laporan audit keuangan"
+    ],
+    answer: 0,
+    explanation: "Deliverables: Data Architecture Design, Data Flows, Data Value Chains, Enterprise Data Model, dan Implementation Roadmap."
+  },
+  {
+    topic: "Data Architecture",
+    question: "Mengapa replikasi data perlu dikontrol oleh Data Architecture governance?",
+    choices: [
+      "Karena replikasi dapat meningkatkan performa dan ketersediaan, tetapi juga bisa menimbulkan inkonsistensi data",
+      "Karena replikasi selalu menurunkan performa aplikasi",
+      "Karena replikasi dilarang oleh regulasi",
+      "Karena replikasi menghapus metadata"
+    ],
+    answer: 0,
+    explanation: "Replikasi umum dipakai untuk meningkatkan kinerja dan ketersediaan, namun berisiko inkonsisten. Governance memastikan mekanisme replikasi sesuai tingkat konsistensi yang dibutuhkan (tidak semua aplikasi butuh konsistensi ketat)."
+  },
+  {
+    topic: "Data Architecture",
+    question: "Manakah yang termasuk risiko dalam readiness/risk assessment penerapan Data Architecture?",
+    choices: [
+      "Dukungan manajemen yang kuat",
+      "Culture shock dan kurangnya dukungan manajemen",
+      "Sponsor yang sangat percaya diri",
+      "Rekam jejak keberhasilan yang panjang"
+    ],
+    answer: 1,
+    explanation: "Risiko di modul: kurang dukungan manajemen, tidak ada rekam jejak, sponsor ragu-ragu, keputusan eksekutif kontraproduktif, culture shock, project leader kurang berpengalaman, dan dominasi satu sudut pandang."
+  },
+  {
+    topic: "Data Architecture",
+    question: "Manakah yang BUKAN metrik kinerja Enterprise Data Architecture?",
+    choices: [
+      "Architecture standard compliance rate",
+      "Use/reuse/replace/retire measurements",
+      "Business value measurements (misalnya business agility)",
+      "Jumlah baris data transaksi per hari"
+    ],
+    answer: 3,
+    explanation: "Metrik meliputi tingkat kepatuhan standar arsitektur, tren implementasi (use/reuse/replace/retire, efisiensi eksekusi proyek), dan pengukuran nilai bisnis."
+  },
+  {
+    topic: "Data Architecture",
+    question: "Dalam Data Architecture Governance, Enterprise Data Architecture diibaratkan sebagai apa untuk integrasi jangka panjang?",
+    choices: ["Kotak alat (toolbox)", "Rencana tata ruang ('zoning plan')", "Buku kas", "Mesin pencari"],
+    answer: 1,
+    explanation: "Enterprise Data Architecture berfungsi sebagai 'zoning plan' integrasi jangka panjang; arsitektur masa depan memengaruhi tujuan dan prioritas proyek di portofolio."
+  },
+
+  // ===================== MODUL: DATA DEVELOPMENT & OPERATIONS =====================
+  {
+    topic: "Data Development & Operations",
+    question: "Data Development didefinisikan sebagai...",
+    choices: [
+      "Perencanaan, kontrol, dan dukungan aset data terstruktur sepanjang siklus hidup",
+      "Merancang, mengimplementasikan, dan memelihara solusi untuk memenuhi kebutuhan data enterprise",
+      "Pengawasan regulasi data oleh pemerintah",
+      "Pembuatan kebijakan data oleh Data Governance Council"
+    ],
+    answer: 1,
+    explanation: "Pilihan A adalah definisi Data Operations Management. Data Development berfokus pada desain, implementasi, dan pemeliharaan solusi data."
+  },
+  {
+    topic: "Data Development & Operations",
+    question: "Manakah pernyataan yang benar tentang conceptual data model?",
+    choices: [
+      "Memuat tipe data dan indeks spesifik DBMS",
+      "Bergantung pada teknologi database yang dipakai",
+      "Hanya dibuat setelah database fisik selesai",
+      "Memuat entitas bisnis dasar dan kritis beserta hubungannya, independen dari teknologi dan konteks penggunaan"
+    ],
+    answer: 3,
+    explanation: "Conceptual model adalah gambaran tingkat tinggi tentang subject area bisnis yang mendefinisikan semantik (kata benda dan kata kerja) istilah bisnis, dan disertai glosarium."
+  },
+  {
+    topic: "Data Development & Operations",
+    question: "Entitas 'Registration' yang bergantung pada Student dan Course merupakan contoh entitas...",
+    choices: [
+      "Attributive/characteristic entity",
+      "Independent entity",
+      "Associative/mapping entity",
+      "Category/sub-type entity"
+    ],
+    answer: 2,
+    explanation: "Associative/mapping entity bergantung pada dua atau lebih entitas. Attributive bergantung pada satu entitas induk (contoh: Employee Beneficiary). Category/sub-type adalah jenis dari entitas lain."
+  },
+  {
+    topic: "Data Development & Operations",
+    question: "Pernyataan 'Satu perusahaan dapat mempekerjakan banyak orang' merupakan contoh aturan data jenis...",
+    choices: [
+      "Cardinality, yaitu jumlah instans entitas yang dapat berpartisipasi dalam suatu relationship",
+      "Referential integrity",
+      "Normalization",
+      "Abstraction"
+    ],
+    answer: 0,
+    explanation: "Cardinality mendefinisikan kuantitas instans entitas dalam relationship. Referential integrity memastikan nilai valid (misal: orang boleh ada tanpa perusahaan, tetapi perusahaan harus punya minimal satu orang)."
+  },
+  {
+    topic: "Data Development & Operations",
+    question: "Tujuan dasar normalization pada logical data model adalah...",
+    choices: [
+      "Memperbanyak duplikasi data agar akses cepat",
+      "Menyimpan setiap elemen data hanya di satu tempat",
+      "Menggabungkan semua atribut dalam satu tabel",
+      "Menghapus semua relationship antar entitas"
+    ],
+    answer: 1,
+    explanation: "Normalization adalah proses menerapkan aturan untuk mengorganisasi kompleksitas bisnis ke struktur data yang stabil, dengan tujuan setiap elemen data berada di satu tempat saja."
+  },
+  {
+    topic: "Data Development & Operations",
+    question: "Konsep 'phone number' pada model konseptual dipecah menjadi phone type code, country code, area code, prefix, base number, dan extension di model logis. Prinsip apa yang diterapkan?",
+    choices: [
+      "Atribut harus bersifat atomik (satu fakta yang tidak dapat dibagi lagi)",
+      "Atribut harus selalu menjadi primary key",
+      "Atribut harus memakai nama teknis dengan singkatan",
+      "Atribut harus bernilai NULL"
+    ],
+    answer: 0,
+    explanation: "Atribut di model logis harus atomik: hanya memuat satu fakta yang tidak dapat dipecah lagi."
+  },
+  {
+    topic: "Data Development & Operations",
+    question: "Apa yang membedakan physical data model dari logical data model?",
+    choices: [
+      "Physical model tidak memuat tabel dan kolom",
+      "Physical model hanya berisi glosarium bisnis",
+      "Physical model mengoptimalkan implementasi dengan mempertimbangkan kemampuan DBMS, batasan teknologi, performa, dan standar pemodelan",
+      "Physical model independen dari seluruh teknologi"
+    ],
+    answer: 2,
+    explanation: "Physical model dirancang dengan kemampuan DBMS tertentu (misal Oracle, SQL Server) dan kebutuhan performa; logical model masih independen dari teknologi."
+  },
+  {
+    topic: "Data Development & Operations",
+    question: "Manakah yang merupakan tiga goal Data Operations Management?",
+    choices: [
+      "Melindungi integritas aset data terstruktur, mengelola ketersediaan data sepanjang siklus hidup, dan mengoptimalkan performa transaksi database",
+      "Menentukan strategi bisnis, merekrut data steward, dan menilai aset data",
+      "Membuat model konseptual, logis, dan fisik",
+      "Menyusun kebijakan, standar, dan regulasi data"
+    ],
+    answer: 0,
+    explanation: "Goal: (1) protect and ensure integrity of structured data assets, (2) manage availability of data throughout its lifecycle, (3) optimize performance of database transactions."
+  },
+  {
+    topic: "Data Development & Operations",
+    question: "Aktivitas 'Plan for Data Recovery' (4.1.3) dalam Data Operations termasuk kategori...",
+    choices: ["Development (D)", "Planning (P)", "Operational (O)", "Control (C)"],
+    answer: 1,
+    explanation: "Plan for Data Recovery bertanda (P). Sedangkan 'Backup and Recover Data' adalah Operational (O), dan 'Monitor and Tune Database Performance' adalah Control (C) pada context diagram."
+  },
+  {
+    topic: "Data Development & Operations",
+    question: "Pada proses 'Backup and Recover Data', siapa Responsible Role dan Approving Role-nya?",
+    choices: [
+      "Responsible: Data Stewards; Approving: Data Governance Council",
+      "Responsible: Software Developers; Approving: Data Architects",
+      "Responsible: Data Analysts; Approving: Application Architects",
+      "Responsible: DBAs; Approving: DM Executive"
+    ],
+    answer: 3,
+    explanation: "Pada ringkasan Data Operations, backup dan recovery dilakukan oleh DBAs dan disetujui oleh DM Executive, dengan deliverable berupa backup/log database, restored database, dan business continuity."
   }
 ];
